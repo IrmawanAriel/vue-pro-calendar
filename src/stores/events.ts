@@ -19,6 +19,8 @@ export type Appointment = {
   comment?: string;
   createdAt?: string; //DateIsoString
   updatedAt?: string; //DateIsoString
+  startDate?: string; //DateIsoString
+  EndDate?: string; //DateIsoString
 };
 
 export type T_View = "day" | "week" | "month";

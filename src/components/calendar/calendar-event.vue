@@ -22,9 +22,8 @@
         ref="eventSide"
         @click.stop.prevent="openEvtList()"
       >
-        <!-- 1 event -->
+        <!-- event or events > 1 -->
         <div
-          v-if="RdvsPkg.length === 1"
           class="event-body select-none w-full p-0dt375"
         >
           <div class="single-event-inf">
@@ -66,18 +65,6 @@
           </div>
         </div>
         <!-- more than 1 event-->
-        <div
-          v-else-if="RdvsPkg.length > 1"
-          class="event-body select-none w-full p-0dt375"
-        >
-          <span
-            class="font-semibold text-0EA5E9 text-sm leading-4 block truncate text-left calendar--events-count"
-          >
-            {{ RdvsPkg.length }}&nbsp;{{
-              configs?.eventName || $t("calendar.appointments")
-            }}
-          </span>
-        </div>
       </div>
 
       <!--------------------------------- popups zone ------------------------------->
